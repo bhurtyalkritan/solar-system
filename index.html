@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar System - Three.js</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="container">
+        <canvas id="solarSystem"></canvas>
+        
+        <div id="infoPanel">
+            <div class="info-header">
+                <h2>Space Explorer</h2>
+                <div class="camera-info">
+                    <p>Distance from Earth: <span id="earthDistance">0</span> km</p>
+                    <p>Camera Position: <span id="cameraPosition">0, 0, 0</span></p>
+                </div>
+            </div>
+            
+            <div class="celestial-info">
+                <h3>Nearest Object: <span id="nearestObject">None</span></h3>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <label>Mass:</label>
+                        <span id="objectMass">-</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Diameter:</label>
+                        <span id="objectDiameter">-</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Surface Gravity:</label>
+                        <span id="objectGravity">-</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Orbital Period:</label>
+                        <span id="objectOrbitalPeriod">-</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Rotation Period:</label>
+                        <span id="objectRotationPeriod">-</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Average Temperature:</label>
+                        <span id="objectTemperature">-</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Distance from Sun:</label>
+                        <span id="objectSunDistance">-</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Number of Moons:</label>
+                        <span id="objectMoons">-</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="comparison-info">
+                <h3>Earth Comparison</h3>
+                <div class="comparison-grid">
+                    <div class="comparison-item">
+                        <label>Size Ratio:</label>
+                        <span id="sizeRatio">-</span>
+                    </div>
+                    <div class="comparison-item">
+                        <label>Gravity Ratio:</label>
+                        <span id="gravityRatio">-</span>
+                    </div>
+                    <div class="comparison-item">
+                        <label>Day Length Ratio:</label>
+                        <span id="dayRatio">-</span>
+                    </div>
+                    <div class="comparison-item">
+                        <label>Year Length Ratio:</label>
+                        <span id="yearRatio">-</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="travel-info">
+                <h3>Travel Times</h3>
+                <div class="travel-grid">
+                    <div class="travel-item">
+                        <label>Light Speed:</label>
+                        <span id="travelLight">-</span>
+                    </div>
+                    <div class="travel-item">
+                        <label>Space Shuttle:</label>
+                        <span id="travelShuttle">-</span>
+                    </div>
+                    <div class="travel-item">
+                        <label>Modern Spacecraft:</label>
+                        <span id="travelSpacecraft">-</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-facts">
+                <h3>Space Facts</h3>
+                <div id="factContainer">
+                    <p id="currentFact"></p>
+                    <div class="fact-nav">
+                        <button id="prevFact">←</button>
+                        <span id="factNumber"></span>
+                        <button id="nextFact">→</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script async src="https://unpkg.com/es-module-shims@1.8.0/dist/es-module-shims.js"></script>
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.156.1/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.156.1/examples/jsm/"
+            }
+        }
+    </script>
+    <script type="module" src="main.js"></script>
+</body>
+</html>
